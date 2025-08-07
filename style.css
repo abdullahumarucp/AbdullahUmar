@@ -327,10 +327,11 @@ section {
   animation: animate 1s linear infinite;
 }
 
-.img-hero {
+/* .img-hero {
   position: relative;
   animation: floatImage 4s ease-in-out infinite;
   animation-delay: 3s;
+  
 }
 
 .img-hero img {
@@ -396,25 +397,88 @@ section {
   top: 0;
   left: 50%;
   font-size: 1.2rem;
+} */
+
+.img-hero {
+  position: relative;
+  animation: floatImage 4s ease-in-out infinite;
+  animation-delay: 3s;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
 }
 
+.img-hero img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+.rotate-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  padding: 2rem;
+  z-index: 20;
+}
+
+.rotate-text span {
+  position: relative;
+  width: 442px;
+  height: 442px;
+  background: red;
+  border: 6px solid #eaeef0;
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.rotate-text span::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  background: #00aaff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.rotate-text span i {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-color-bg, linear-gradient(45deg, #0ff, #00f));
+  filter: blur(5px);
+  animation: animate 2s linear infinite;
+}
+
+.rotate-text .text {
+  position: absolute;
+  width: 490px;
+  height: 490px;
+  background: #f2f6fb;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px 5.94px rgba(0, 0, 0, 0.2);
+  animation: rotateText 30s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.rotate-text .text p {
+  font-size: 1.2rem;
+  color: #000;
+  padding: 1rem;
+}
+
+/* ✅ Mobile Responsive */
 @media (max-width: 768px) {
-  .img-hero img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .rotate-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
   .rotate-text span {
     width: 240px;
     height: 240px;
@@ -429,9 +493,8 @@ section {
     height: 260px;
   }
 
-  .text b {
-    font-size: 0.8rem;
-    transform-origin: 0 130px;
+  .rotate-text .text p {
+    font-size: 0.9rem;
   }
 }
 
