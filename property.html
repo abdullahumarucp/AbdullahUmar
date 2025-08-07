@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Property Services | Abdullah Umar</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* Same CSS from above */
+    :root {
+      --gradient-color-bg: linear-gradient(180deg, rgba(247,1,120,1) 0%, rgba(160,8,156,1) 51%, rgba(99,13,178,1) 100%);
+      --hover-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9f9f9; }
+    .service-page { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    .back-btn {
+      display: inline-block; margin-bottom: 20px; text-decoration: none; font-weight: 500;
+      background: var(--gradient-color-bg); color: white; padding: 10px 18px; border-radius: 6px;
+      box-shadow: var(--hover-box-shadow); transition: all 0.3s ease;
+    }
+    .back-btn:hover { transform: translateY(-2px); }
+    .icon-header { font-size: 50px; color: #e6006d; margin-bottom: 10px; }
+    h1 { font-size: 36px; margin-bottom: 10px; }
+    h2 { margin-top: 40px; font-size: 28px; border-left: 5px solid #e6006d; padding-left: 10px; }
+    .project-section {
+      background: white; padding: 20px; margin: 20px 0; border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; margin: 15px 0; }
+    .carousel img {
+      flex-shrink: 0; width: 100%; max-width: 300px; height: 200px;
+      object-fit: cover; border-radius: 10px; scroll-snap-align: center;
+    }
+    ul { list-style-type: disc; padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <div class="service-page">
+    <a href="index.html#portfolio" class="back-btn"><i class='bx bx-left-arrow-alt'></i> Back to Portfolio</a>
+    <div class="icon-header"><i class='bx bx-home'></i></div>
+    <h1>Property Management</h1>
+    <p>We offer property listing, management, and smart solutions to help real estate professionals streamline their services.</p>
+
+    <h2>🏘️ Projects</h2>
+
+    <div class="project-section">
+      <h3>🏡 Smart Property Listing Website</h3>
+      <div class="carousel">
+        <img src="https://via.placeholder.com/300x200?text=Listing+1">
+        <img src="https://via.placeholder.com/300x200?text=Listing+2">
+      </div>
+      <p>Real estate site with property filtering, Google Maps integration, and secure user authentication for agents and buyers.</p>
+    </div>
+
+    <div class="project-section">
+      <h3>🔐 Tenant Management Portal</h3>
+      <div class="carousel">
+        <img src="https://via.placeholder.com/300x200?text=Tenant+1">
+      </div>
+      <p>Digital platform for managing rental agreements, rent collection, complaint logging, and communication with tenants.</p>
+    </div>
+
+    <h2>🛠️ Technologies Used</h2>
+    <ul>
+      <li>Django, PostgreSQL</li>
+      <li>Leaflet Maps / Google Maps</li>
+      <li>Stripe Payments</li>
+      <li>Firebase for Notifications</li>
+    </ul>
+  </div>
+</body>
+</html>

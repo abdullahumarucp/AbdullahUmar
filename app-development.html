@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App Development | Abdullah Umar</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    :root {
+      --gradient-color-bg: linear-gradient(180deg, rgba(247,1,120,1) 0%, rgba(160,8,156,1) 51%, rgba(99,13,178,1) 100%);
+      --hover-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .service-page {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      background: var(--gradient-color-bg);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      box-shadow: var(--hover-box-shadow);
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .icon-header {
+      font-size: 50px;
+      color: #e6006d;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 28px;
+      border-left: 5px solid #e6006d;
+      padding-left: 10px;
+    }
+
+    .project-section {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .carousel img {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      scroll-snap-align: center;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      .carousel img { height: 160px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="service-page">
+
+    <!-- Back Button at the Top -->
+    <a href="index.html#portfolio" class="back-btn"><i class='bx bx-left-arrow-alt'></i> Back to Portfolio</a>
+
+    <!-- Icon Header and Page Intro -->
+    <div class="icon-header"><i class='bx bx-layer'></i></div>
+    <h1>App Development</h1>
+    <p>We build beautiful, high-performance apps for Android and iOS using Flutter and Kotlin that align with your business goals.</p>
+
+    <h2>📱 Projects & Features</h2>
+
+    <!-- 🛍️ E-commerce App -->
+    <div class="project-section">
+      <h3>🛍️ E-commerce Mobile App</h3>
+      <div class="carousel">
+        <img src="https://via.placeholder.com/300x200?text=Ecommerce+1" alt="E-commerce App">
+        <img src="https://via.placeholder.com/300x200?text=Ecommerce+2" alt="E-commerce App">
+        <img src="https://via.placeholder.com/300x200?text=Ecommerce+3" alt="E-commerce App">
+      </div>
+      <p>A cross-platform shopping app with real-time cart updates, secure checkout, product filters, and order tracking system with push notifications.</p>
+    </div>
+
+    <!-- 📅 Event Manager -->
+    <div class="project-section">
+      <h3>📅 Event Manager</h3>
+      <div class="carousel">
+        <img src="https://via.placeholder.com/300x200?text=Event+Manager+1" alt="Event App">
+        <img src="https://via.placeholder.com/300x200?text=Event+Manager+2" alt="Event App">
+      </div>
+      <p>This app allows users to create, schedule, and manage personal or business events, send invites, and receive RSVP updates with reminders.</p>
+    </div>
+
+    <!-- 🏥 Healthcare App -->
+    <div class="project-section">
+      <h3>🏥 Healthcare Booking App</h3>
+      <div class="carousel">
+        <img src="https://via.placeholder.com/300x200?text=Healthcare+1" alt="Healthcare App">
+        <img src="https://via.placeholder.com/300x200?text=Healthcare+2" alt="Healthcare App">
+      </div>
+      <p>Doctor-patient booking app with features like video consultation, electronic prescriptions, health records, and appointment reminders.</p>
+    </div>
+
+    <!-- 🛠️ Technologies -->
+    <h2>🛠️ Technologies Used</h2>
+    <ul>
+      <li>Flutter & Dart</li>
+      <li>Firebase Integration</li>
+      <li>REST APIs</li>
+      <li>Local Notifications</li>
+    </ul>
+  </div>
+</body>
+</html>
