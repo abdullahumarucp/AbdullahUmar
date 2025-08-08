@@ -76,15 +76,16 @@
       margin: 15px 0;
     }
 
-    .carousel img {
-      flex-shrink: 0;
-      width: 100%;
-      max-width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      scroll-snap-align: center;
-    }
+.carousel img {
+  flex-shrink: 0;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain; /* Ensures full image is visible */
+  border-radius: 10px;
+  scroll-snap-align: center;
+}
+
 
     ul {
       list-style-type: disc;
